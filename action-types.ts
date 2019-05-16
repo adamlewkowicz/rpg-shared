@@ -1,12 +1,9 @@
+// import { Item } from './objects';
+import {
+  NPC_DIALOG_REQUEST, NPC_DIALOG_CLOSE, $_NPC_DIALOG_RESPONSE,
+} from './consts';
+import * as types from './consts';
 
-export const NPC_DIALOG_REQUEST = 'NPC_DIALOG_REQUEST';
-export const NPC_DIALOG_CLOSE = 'NPC_DIALOG_CLOSE';
-export const $_NPC_DIALOG_RESPONSE = '$_NPC_DIALOG_RESPONSE';
-
-export const types = {
-  NPC_DIALOG_REQUEST,
-  $_NPC_DIALOG_RESPONSE
-}
 
 export interface NpcDialogOpen {
   type: typeof NPC_DIALOG_REQUEST,
@@ -25,5 +22,12 @@ export interface NpcDialogResponse {
   payload: object
 }
 
+export interface NpcShopTrade {
+  type: typeof types.NPC_SHOP_TRADE
+  payload: {
+    buying: number[]
+    selling: number[]
+  }
+}
 
-export type NpcActionTypes = NpcDialogOpen | NpcDialogClose ;
+export type NpcActionTypes = NpcDialogOpen | NpcDialogClose | NpcShopTrade;

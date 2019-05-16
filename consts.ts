@@ -1,0 +1,10 @@
+
+export const NPC_DIALOG_REQUEST = 'NPC_DIALOG_REQUEST';
+export const NPC_DIALOG_CLOSE = 'NPC_DIALOG_CLOSE';
+export const $_NPC_DIALOG_RESPONSE = '$_NPC_DIALOG_RESPONSE';
+
+export const NPC_SHOP_REQUEST = 'NPC_SHOP_REQUEST';
+export const $_NPC_SHOP_RESPONSE = '$_NPC_SHOP_RESPONSE';
+
+export const NPC_SHOP_TRADE = 'NPC_SHOP_TRADE';
+export const $_NPC_SHOP_TRADE = '$_NPC_SHOP_TRADE';
