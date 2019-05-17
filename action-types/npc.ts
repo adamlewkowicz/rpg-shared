@@ -1,13 +1,15 @@
 import * as types from '../consts';
 import { Item } from '../objects';
 
-export interface NpcDialogOpen {
+export interface NpcDialogRequest {
   type: typeof types.NPC_DIALOG_REQUEST,
   meta: {
     io: boolean,
     npcId: number
   }
 }
+
+export { NpcDialogRequest as NpcDialogOpen }
 
 export interface NpcDialogClose {
   type: typeof types.NPC_DIALOG_CLOSE
@@ -18,7 +20,7 @@ export interface NpcDialogResponse {
   payload: object
 }
 
-export type NpcDialogActions = NpcDialogOpen | NpcDialogClose | NpcDialogResponse;
+export type NpcDialogActions = NpcDialogRequest |  NpcDialogClose | NpcDialogResponse;
 
 
 

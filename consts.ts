@@ -1,4 +1,7 @@
 
+/* SYSTEM */
+export const SYSTEM_ERROR = '@@_SYSTEM_ERROR';
+
 /* GAME */
 export const $_LOAD_GAME = '$_LOAD_GAME';
 export const LOAD_LOCATION = 'LOAD_LOCATION';
