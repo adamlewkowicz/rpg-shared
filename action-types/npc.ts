@@ -8,7 +8,6 @@ export interface NpcDialogOpen {
     npcId: number
   }
 }
-export { NpcDialogOpen as NpcDialogRequest }
 
 export interface NpcDialogClose {
   type: typeof types.NPC_DIALOG_CLOSE
@@ -19,8 +18,7 @@ export interface NpcDialogResponse {
   payload: object
 }
 
-export type NpcActionTypes = NpcDialogOpen | NpcDialogClose;
-export { NpcActionTypes as NpcDialogActions };
+export type NpcDialogActions = NpcDialogOpen | NpcDialogClose | NpcDialogResponse;
 
 
 
@@ -31,6 +29,13 @@ export interface NpcShopRequest {
   meta: { npcId: number }
 }
 
+export interface $NpcShopResponse {
+  type: typeof types.$_NPC_SHOP_RESPONSE
+  payload: {
+    items: Item[]
+  }
+}
+
 export interface NpcShopTrade {
   type: typeof types.NPC_SHOP_TRADE
   payload: {
@@ -39,9 +44,8 @@ export interface NpcShopTrade {
   }
 }
 
-export interface $NpcShopResponse {
-  type: typeof types.$_NPC_SHOP_RESPONSE
-  payload: Item[]
+export interface $NpcShopTrade {
+  type: typeof types.$_NPC_SHOP_TRADE
 }
 
 export type NpcShopActions = NpcShopTrade | NpcShopRequest | $NpcShopResponse ;

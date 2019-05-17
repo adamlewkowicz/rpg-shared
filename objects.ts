@@ -7,6 +7,7 @@ export interface Item {
     img: string
   }
   lvl?: number
+  price?: number
   damage?: number
   heal?: number
 }
