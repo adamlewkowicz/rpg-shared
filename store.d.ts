@@ -21,6 +21,8 @@ export interface LocationState {
   height: number
   xRange: number
   yRange: number
+  xSize?: number
+  ySize?: number
 
   mobs: any
   npcs: any
@@ -28,7 +30,7 @@ export interface LocationState {
 
   droppedItems: { [s: string]: Item }
 
-  collisions: Collisions
+  collisions: Collisions | null
   staticCollisions: [],
   terrainCollisions: []
 }
