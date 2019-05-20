@@ -1,4 +1,4 @@
-import { Item } from "./objects";
+import { Item, Character, Collisions } from "./objects";
 
 export interface NpcShopState {
   isLoading: boolean
@@ -13,4 +13,22 @@ export interface NpcDialogState {
   opened: boolean
   isLoading: boolean
   step: number
+}
+
+export interface LocationState {
+  data: any
+  width: number
+  height: number
+  xRange: number
+  yRange: number
+
+  mobs: any
+  npcs: any
+  characters: { [s: string]: Character }
+
+  droppedItems: { [s: string]: Item }
+
+  collisions: Collisions
+  staticCollisions: [],
+  terrainCollisions: []
 }
