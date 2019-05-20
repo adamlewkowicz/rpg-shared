@@ -1,4 +1,5 @@
 import * as types from '../consts';
+import { Action } from '../main';
 
 export interface $SystemError {
   type: typeof types.SYSTEM_ERROR
@@ -7,4 +8,8 @@ export interface $SystemError {
     fatal?: boolean
     message?: string
   }
+}
+
+export interface SystemError extends Action {
+  type: typeof types.SYSTEM_ERROR
 }

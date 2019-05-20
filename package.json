@@ -17,5 +17,8 @@
     "url": "https://github.com/alk831/rpg-shared/issues"
   },
   "homepage": "https://github.com/alk831/rpg-shared#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "@types/redux": "^3.6.0"
+  }
 }
