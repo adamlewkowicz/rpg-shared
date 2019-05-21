@@ -42,8 +42,8 @@ export interface CharacterState {
 }
 
 export interface ChatState {
-  private: MessagePrivate[]
-  group: MessageGroup[]
+  private: { [charId: string]: MessagePrivate[] }
+  group: { [groupId: string]: MessageGroup[] }
   local: MessageLocal[]
   global: MessageGlobal[]
 }
