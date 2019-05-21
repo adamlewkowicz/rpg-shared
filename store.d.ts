@@ -1,4 +1,4 @@
-import { Item, Character, Collisions } from "./objects";
+import { Item, Character, Collisions, Message, MessagePrivate, MessageGroup, MessageLocal, MessageGlobal } from "./objects";
 
 export interface NpcShopState {
   isLoading: boolean
@@ -39,4 +39,11 @@ export interface CharacterState {
   data: Character | null,
 	inventory: { [id: string]: Item },
 	inventorySize: number
+}
+
+export interface ChatState {
+  private: MessagePrivate[]
+  group: MessageGroup[]
+  local: MessageLocal[]
+  global: MessageGlobal[]
 }
