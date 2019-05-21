@@ -18,6 +18,7 @@ export interface Character {
   x: number
   y: number
   lvl?: number
+  status: 'IDLE' | 'FIGHTING' | 'TRADING' | 'ASLEEP'
 }
 
 export type Collisions = [Array<number>]

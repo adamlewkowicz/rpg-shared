@@ -9,7 +9,8 @@ export interface ExtendedAction extends Action {
   type: ActionType
   payload?: any
   meta?: {
-    io: boolean | Io
+    io?: boolean | Io
+    [x: string]: any
   }
   error?: {
     instance?: Error

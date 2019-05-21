@@ -7,5 +7,7 @@ export interface $LoadGame {
     collisions: [number[]]
     inventory: Item[]
     characters: Character[]
+    character: Character
+    inventorySize: number
   }
 }

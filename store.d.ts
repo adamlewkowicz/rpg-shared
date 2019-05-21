@@ -34,3 +34,9 @@ export interface LocationState {
   staticCollisions: [],
   terrainCollisions: []
 }
+
+export interface CharacterState {
+  data: Character | null,
+	inventory: { [id: string]: Item },
+	inventorySize: number
+}
