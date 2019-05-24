@@ -24,7 +24,7 @@ export interface Character {
 
 export interface BaseMessage {
   /* Consider client id generation through nanoid */
-  id?: number
+  id: string
   type: 'PRIVATE' | 'GROUP' | 'CLAN' | 'LOCAL' | 'GLOBAL'
   author?: Character
   authorId?: number

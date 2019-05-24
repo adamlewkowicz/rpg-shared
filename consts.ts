@@ -33,12 +33,10 @@ export const $_NPC_SHOP_TRADE = '$_NPC_SHOP_TRADE';
 
 
 /* CHAT */
-/* Deprecated */
-// export const SEND_MESSAGE = 'SEND_MESSAGE';
-// export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
-/* */
 export const MESSAGE_SEND = 'MESSAGE_SEND';
 export const $_MESSAGE_RECEIVE = '$_MESSAGE_RECEIVE';
+/** Updates temporary message id to created on server. */
+export const $_MESSAGE_ACKNOWLEDGE = '$_MESSAGE_ACKNOWLEDGE';
 
 
 /* INVENTORY */
