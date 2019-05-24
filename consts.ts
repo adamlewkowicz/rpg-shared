@@ -34,8 +34,8 @@ export const $_NPC_SHOP_TRADE = '$_NPC_SHOP_TRADE';
 
 /* CHAT */
 /* Deprecated */
-export const SEND_MESSAGE = 'SEND_MESSAGE';
-export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
+// export const SEND_MESSAGE = 'SEND_MESSAGE';
+// export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
 /* */
 export const MESSAGE_SEND = 'MESSAGE_SEND';
 export const $_MESSAGE_RECEIVE = '$_MESSAGE_RECEIVE';

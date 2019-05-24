@@ -3,19 +3,18 @@ import { Message, BaseMessage } from '../objects';
 
 export interface MessageSend {
   type: typeof types.MESSAGE_SEND
-  payload: string
+  payload: Message
   meta: {
-    type: BaseMessage['type']
+    /** Determines target - group, player or clan id. */
     to?: number
   }
 }
 
 export interface $MessageReceive {
   type: typeof types.$_MESSAGE_RECEIVE
-  payload: string
+  payload: Message
   meta: {
-    type: BaseMessage['type']
-    to?: number
-    authorId: number
+    /** Determines target - group, player or clan id. */
+    to?: number | string
   }
 }
