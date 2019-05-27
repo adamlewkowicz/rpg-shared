@@ -1,4 +1,4 @@
-import { Item, Character, Collisions, Message, MessagePrivate, MessageGroup, MessageLocal, MessageGlobal } from "./objects";
+import { Item, Location, Character, Collisions, Message, MessagePrivate, MessageGroup, MessageLocal, MessageGlobal } from "./objects";
 
 export interface NpcShopState {
   isLoading: boolean
@@ -16,7 +16,7 @@ export interface NpcDialogState {
 }
 
 export interface LocationState {
-  data: any
+  data: Location | null
   width: number
   height: number
   xRange: number
@@ -24,11 +24,10 @@ export interface LocationState {
   xSize?: number
   ySize?: number
 
-  mobs: any
-  npcs: any
-  characters: { [s: string]: Character }
-
-  droppedItems: { [s: string]: Item }
+  mobs: { [id: string]: Mob }
+  npcs: { [id: string]: Npc }
+  characters: { [id: string]: Character }
+  droppedItems: { [id: string]: Item }
 
   collisions: Collisions | null
   staticCollisions: [],

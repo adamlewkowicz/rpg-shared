@@ -63,8 +63,29 @@ export interface Mob {
     name: string
     img: string
   }
+  x: number
+  y: number
   lvl: number
   damage?: number
   /** Determines if will start fight by itself. */
   aggresive?: boolean
+}
+
+export interface Location {
+  id: number
+  name: string
+  width: number
+  height: number
+  background: string
+}
+
+export interface Npc {
+  id: number
+  name: string
+  img: string
+  gender?: 'male' | 'female'
+  x: number
+  y: number
+  location?: Location
+  lvl: number
 }
