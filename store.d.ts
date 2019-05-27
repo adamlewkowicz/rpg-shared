@@ -47,3 +47,13 @@ export interface ChatState {
   local: MessageLocal[]
   global: MessageGlobal[]
 }
+
+export interface GameState {
+  status: 'IDLE' | 'LOADING' | 'CHANGING_LOCATION',
+  width: number,
+  height: number,
+  charWidth: number,
+  charHeight: number,
+  mouseX: number,
+  mouseY: number
+}
