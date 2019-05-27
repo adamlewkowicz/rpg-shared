@@ -1,4 +1,4 @@
-import { Item, Location, Character, Collisions, Message, MessagePrivate, MessageGroup, MessageLocal, MessageGlobal } from "./objects";
+import { Item, Mob, Npc, Location, Character, Collisions, Message, MessagePrivate, MessageGroup, MessageLocal, MessageGlobal } from "./objects";
 
 export interface NpcShopState {
   isLoading: boolean
