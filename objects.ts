@@ -53,3 +53,18 @@ export type Message = MessagePrivate | MessageGroup | MessageClan | MessageLocal
 export type FightAction = 'STEP_AHEAD' | 'BASIC_ATTACK' | 'USE_ABILITY';
 
 export type Collisions = [Array<number>]
+
+export interface Mob {
+  id: number
+  status: 'IDLE' | 'FIGHTING' | 'RESPAWNING'
+  type: {
+    id: number
+    category: 'common' | 'rare' | 'heroic' | 'legendary'
+    name: string
+    img: string
+  }
+  lvl: number
+  damage?: number
+  /** Determines if will start fight by itself. */
+  aggresive?: boolean
+}
