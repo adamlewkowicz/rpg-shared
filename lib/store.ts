@@ -56,3 +56,9 @@ export interface GameState {
   mouseX: number,
   mouseY: number
 }
+
+export interface FightState {
+  id: null,
+  actions: any[],
+  status: 'STARTED' | 'WAITING_FOR_ACTION' | 'WAITING_FOR_RESULT' | 'FINISHED' | null
+}

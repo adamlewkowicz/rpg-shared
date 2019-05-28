@@ -11,3 +11,5 @@ export type ChatActions = MessageSend | $MessageReceive | $MessageAcknowledge;
 export type GameActions = $LoadGame | MousePositionUpdate | any;
 
 export type LocationActions = $LoadGame | $CharacterUpdate | $CharacterJoin | $CharacterLeave | $ItemDroppedAdd | $ItemDroppedRemove
+
+export type FightActions = any;
