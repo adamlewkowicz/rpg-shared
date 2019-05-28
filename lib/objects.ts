@@ -17,6 +17,8 @@ export interface Character {
   name: string
   x: number
   y: number
+  positionX: number
+  positionY: number
   img?: string
   lvl?: number
   status: 'IDLE' | 'FIGHTING' | 'TRADING' | 'ASLEEP'

@@ -29,7 +29,7 @@ export interface LocationState {
   characters: { [id: string]: Character }
   droppedItems: { [id: string]: Item }
 
-  collisions: Collisions | null
+  collisions: Collisions
   staticCollisions: [],
   terrainCollisions: []
 }
