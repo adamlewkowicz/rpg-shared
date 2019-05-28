@@ -58,11 +58,12 @@ export type Collisions = [Array<number>]
 
 export interface Mob {
   id: number
+  name: string
   status: 'IDLE' | 'FIGHTING' | 'RESPAWNING'
   type: {
     id: number
     category: 'common' | 'rare' | 'heroic' | 'legendary'
-    name: string
+    name?: string
     img: string
   }
   x: number
