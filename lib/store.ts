@@ -48,13 +48,15 @@ export interface ChatState {
 }
 
 export interface GameState {
-  status: 'IDLE' | 'LOADING' | 'CHANGING_LOCATION',
-  width: number,
-  height: number,
-  charWidth: number,
-  charHeight: number,
-  mouseX: number,
+  status: 'IDLE' | 'LOADING' | 'CHANGING_LOCATION'
+  width: number
+  height: number
+  charWidth: number
+  charHeight: number
+  mouseX: number
   mouseY: number
+  mouseGameX: number
+  mouseGameY: number
 }
 
 export interface FightState {

@@ -5,5 +5,7 @@ export interface MousePositionUpdate {
   payload: {
     mouseX: number
     mouseY: number
+    mouseGameX: number
+    mouseGameY: number
   }
 }
