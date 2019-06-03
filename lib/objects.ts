@@ -17,6 +17,8 @@ export interface Character {
   name: string
   x: number
   y: number
+  positionX: number
+  positionY: number
   img?: string
   lvl?: number
   status: 'IDLE' | 'FIGHTING' | 'TRADING' | 'ASLEEP'
@@ -56,11 +58,12 @@ export type Collisions = number[][]
 
 export interface Mob {
   id: number
+  name: string
   status: 'IDLE' | 'FIGHTING' | 'RESPAWNING'
   type: {
     id: number
     category: 'common' | 'rare' | 'heroic' | 'legendary'
-    name: string
+    name?: string
     img: string
   }
   x: number

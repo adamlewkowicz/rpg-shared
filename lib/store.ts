@@ -29,7 +29,7 @@ export interface LocationState {
   characters: { [id: string]: Character }
   droppedItems: { [id: string]: Item }
 
-  collisions: Collisions | null
+  collisions: Collisions
   staticCollisions: [],
   terrainCollisions: []
 }
@@ -48,11 +48,19 @@ export interface ChatState {
 }
 
 export interface GameState {
-  status: 'IDLE' | 'LOADING' | 'CHANGING_LOCATION',
-  width: number,
-  height: number,
-  charWidth: number,
-  charHeight: number,
-  mouseX: number,
+  status: 'IDLE' | 'LOADING' | 'CHANGING_LOCATION'
+  width: number
+  height: number
+  charWidth: number
+  charHeight: number
+  mouseX: number
   mouseY: number
+  mouseGameX: number
+  mouseGameY: number
+}
+
+export interface FightState {
+  id: null,
+  actions: any[],
+  status: 'STARTED' | 'WAITING_FOR_ACTION' | 'WAITING_FOR_RESULT' | 'FINISHED' | null
 }
