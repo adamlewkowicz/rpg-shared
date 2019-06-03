@@ -26,3 +26,13 @@ export interface $ItemDroppedRemove {
   type: typeof types.$_ITEM_DROPPED_REMOVE
   meta: { itemId: Item['id'] }
 }
+
+export interface ItemDrop {
+  type: typeof types.ITEM_DROP
+  meta: { itemId: Item['id'] }
+}
+
+export interface ItemPickup {
+  type: typeof types.ITEM_PICKUP
+  meta: { itemId: Item['id'] }
+}

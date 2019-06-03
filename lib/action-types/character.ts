@@ -7,10 +7,10 @@ export interface CharacterUpdate {
   payload: Character
 }
 
-export interface $CharacterUpdate extends Action {
-  type: typeof types.$_CHARACTER_UPDATE
-  payload: Character
-  meta: {
-    charId: number
-  }
-}
+// export interface $CharacterUpdate extends Action {
+//   type: typeof types.$_CHARACTER_UPDATE
+//   payload: Character
+//   meta: {
+//     charId: number
+//   }
+// }
