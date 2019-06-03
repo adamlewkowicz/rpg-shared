@@ -1,5 +1,5 @@
 import * as types from '../consts';
-import { Character, Item } from '../objects';
+import { Character, Item, Location } from '../objects';
 
 export interface $CharacterUpdate {
   type: typeof types.$_CHARACTER_UPDATE
@@ -35,4 +35,17 @@ export interface ItemDrop {
 export interface ItemPickup {
   type: typeof types.ITEM_PICKUP
   meta: { itemId: Item['id'] }
+}
+
+export interface LocationChangeRequest {
+  type: typeof types.LOCATION_CHANGE_REQUEST
+  meta: { locationId: Location['id'] }
+}
+
+export interface $LocationChangeResponse {
+  type: typeof types.$_LOCATION_CHANGE_RESPONSE
+  payload: {
+    location: Location
+    characters: Character[]
+  }
 }
