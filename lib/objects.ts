@@ -52,7 +52,7 @@ export type Message = MessagePrivate | MessageGroup | MessageClan | MessageLocal
 
 export type FightAction = 'STEP_AHEAD' | 'BASIC_ATTACK' | 'USE_ABILITY';
 
-export type Collisions = [Array<number>]
+export type Collisions = number[][]
 
 export interface Mob {
   id: number
