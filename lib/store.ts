@@ -1,4 +1,4 @@
-import { Item, Mob, Npc, Location, Character, Collisions, Message, MessagePrivate, MessageGroup, MessageLocal, MessageGlobal } from "./objects";
+import { Item, Mob, Npc, Location, Character, Collisions, Message, MessagePrivate, MessageGroup, MessageLocal, MessageGlobal, FightAction } from "./objects";
 
 export interface NpcShopState {
   isLoading: boolean
@@ -59,8 +59,14 @@ export interface GameState {
   mouseGameY: number
 }
 
+export interface FightTarget {
+  id: number
+  type: 'MOB' | 'CHARACTER'
+}
+
 export interface FightState {
   id: null,
-  actions: any[],
+  actions: FightAction[],
+  targets: FightTarget[]
   status: 'STARTED' | 'WAITING_FOR_ACTION' | 'WAITING_FOR_RESULT' | 'FINISHED' | null
 }

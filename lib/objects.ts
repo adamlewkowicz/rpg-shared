@@ -52,7 +52,7 @@ export interface MessageGlobal extends BaseMessage {
 export type Message = MessagePrivate | MessageGroup | MessageClan | MessageLocal | MessageGlobal;
 
 
-export type FightAction = 'STEP_AHEAD' | 'BASIC_ATTACK' | 'USE_ABILITY';
+// export type FightAction = 'STEP_AHEAD' | 'BASIC_ATTACK' | 'USE_ABILITY';
 
 export type Collisions = number[][]
 
@@ -91,4 +91,14 @@ export interface Npc {
   y: number
   location?: Location
   lvl: number
+}
+
+export interface FightAction {
+  id: number
+  type: 'STEP_AHEAD' | 'BASIC_ATTACK' | 'USE_ABILITY'
+  targetId: number
+  targetType: 'MOB' | 'CHARACTER'
+  result: { [key: string]: any }
+  /** Target stats changes (hp, mana, energy...) - payload */
+  changes: { [key: string]: any }
 }
